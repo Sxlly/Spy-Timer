@@ -368,6 +368,14 @@ def countup_method(command):
 
 
 
+
+
+
+
+
+
+
+
 # interface layout and packing (pushing to app) =>>>
 
 #bgimage
