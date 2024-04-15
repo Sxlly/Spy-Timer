@@ -400,6 +400,7 @@ reset_btn.place(x=50, y=225)
 #RUN APP --->>>
 #/*************\
 SpyApp.mainloop()
+asyncio.run(main())
 
 
 
