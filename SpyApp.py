@@ -403,7 +403,8 @@ reset_btn.place(x=50, y=225)
 #RUN APP --->>>
 #/*************\
 
-SpyApp.mainloop(asyncio.run(main()))
+SpyApp.after(100, asyncio.run(main()))
+SpyApp.mainloop()
 
 
 
