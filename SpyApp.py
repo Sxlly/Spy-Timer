@@ -242,7 +242,8 @@ reset_btn = customtkinter.CTkButton(master=frame, width=220, text="Reset", font=
 reset_btn.place(x=50, y=225)
 
 
-
+#RUN APP --->>>
+#/*************\
 SpyApp.mainloop()
 
 
