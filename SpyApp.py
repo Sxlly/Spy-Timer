@@ -166,6 +166,97 @@ async def spyLocaterBlu():
         print("most likely error: SCREEM RESOLUTION SMALLER THAN CURRENT INDEX")
         time.sleep(5)
         return spyPixelLocation
+    
+#/////////////////////////////
+#determines the spys current State (Dead/Alive --> {True/False})
+async def SpyState(spyLocationPixel):
+
+    try:
+
+        if not spyLocationPixel:
+            print("Spy wasn't previously found!")
+            spyStatus = "none"
+            return spyStatus
+        
+        else:
+
+            spyStatus = "none"
+            image = ImageGrab.grab()
+            color = image.getpixel((spyLocationPixel[0], spyLocationPixel[1]))
+
+            if color == (0,0,0):
+
+                spyStatus = "alive"
+                return spyStatus
+
+            else:
+                spyStatus = "dead"
+                return spyStatus
+    
+    except:
+        print("AN ERROR OCCURED")
+        print("most likely error: Pixel does not exist")
+        time.sleep(5)
+
+#//////////////////////////////////////
+#sets 3rd part timer on or off {true/false} depending on spyState() method result
+async def SpyTimer(spyLocationPixel):
+
+    interation_counter = 0
+
+    try:
+
+        while True:
+
+            if interation_counter == 0:
+
+                spyStateOne = await SpyState(spyLocationPixel)
+                await asyncio.sleep(0.25)
+                spyStateTwo = await SpyState(spyLocationPixel)
+
+                print("state one" + spyStateOne)
+                print("state two" + spyStateTwo)
+
+                if spyStateOne == "alive":
+
+                    pyautogui.press('o')
+                    interation_counter += 1
+                    aliveNoise()
+                
+                elif spyStateOne == "dead":
+
+                    pyautogui.press('p')
+                    interation_counter += 1
+                    deathNoise()
+                
+                else:
+                    print("There is no Spy in Play currently\n")
+                    continue
+            else:
+
+                spyStateOne = await SpyState(spyLocationPixel)
+                await asyncio.sleep(0.25)
+                spyStateTwo = await SpyState(spyLocationPixel)
+
+                print("state one" + spyStateOne)
+                print("state two" + spyStateTwo)
+
+                if spyStateOne == "dead" and spyStateTwo == "alive":
+
+                    pyautogui.press('o')
+                    aliveNoise()
+
+                elif spyStateOne == "alive" and spyStateTwo == "dead":
+
+                    pyautogui.press('p')
+                    deathNoise()
+                
+                else:
+                    continue
+    except:
+        print("AN ERROR OCCURED")
+        time.sleep(5)
+
 
 
 #///////////////////////////////
