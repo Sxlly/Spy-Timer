@@ -7,6 +7,7 @@ from playsound import *
 import time
 import customtkinter
 import datetime
+import threading
 
 customtkinter.set_appearance_mode("Dark")
 customtkinter.set_default_color_theme("dark-blue")
