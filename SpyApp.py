@@ -283,6 +283,45 @@ async def deathNoise():
     
     return
 
+#////////////////////
+#main function ---> run function
+async def main():
+
+    #1 --> Run team detection
+    #asynchronous
+    #2 --> Run Spy location in 9v9 hud detection
+    #asynchronous
+    #3 ---> Run spy state (Dead/Alive {True/False}) detection 
+    #4 --> Run #3 While True (forever unless error FLAG or terminal kill)
+    try:
+
+        #1
+        hostOnBlu = await bluTeamDetector()
+
+        if hostOnBlu == True:
+            
+            #2
+            spyPixel = await spyLocaterRed()
+
+            #3 --> #4
+            await SpyTimer(spyPixel)
+            return
+        
+        else:
+
+            #2
+            spyPixel = await spyLocaterBlu()
+
+            #3 --> #4
+            await SpyTimer(spyPixel)
+            return
+        
+    except:
+        print("AN ERROR OCCURED")
+        time.sleep(5)
+
+    return
+
 
 #///////////////////////////////
 #method to count upwards on timer, displayed via text on app face
