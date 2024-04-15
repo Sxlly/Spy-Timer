@@ -257,6 +257,31 @@ async def SpyTimer(spyLocationPixel):
         print("AN ERROR OCCURED")
         time.sleep(5)
 
+#///////////////////////////////
+#sound cue played to user when the spy spawns and timer starts --> through .wav file in a file PATH location
+async def aliveNoise():
+
+    iteration_counter = 0
+
+    while iteration_counter == 0:
+
+        playsound("**ADD FILE PATH HERE OF SOUND YOUD LIKE TO USE") #this will throw an ERROR if not changed to actual file PATH**
+        iteration_counter += 1
+    
+    return
+
+#////////////////////////////
+#sound cue played to user when the spy dies and timer starts --> through .wav file in a file PATH location
+async def deathNoise():
+
+    iteration_counter = 0
+
+    while iteration_counter == 0:
+
+        playsound("**ADD FILE PATH HERE OF SOUND YOUD LIKE TO USE") #this will throw an ERROR if not changed to actual file PATH**
+        iteration_counter += 1
+    
+    return
 
 
 #///////////////////////////////
