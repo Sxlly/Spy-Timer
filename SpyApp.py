@@ -219,13 +219,11 @@ async def SpyTimer(spyLocationPixel):
 
                 if spyStateOne == "alive":
 
-                    pyautogui.press('o')
                     interation_counter += 1
                     aliveNoise()
                 
                 elif spyStateOne == "dead":
 
-                    pyautogui.press('p')
                     interation_counter += 1
                     deathNoise()
                 
