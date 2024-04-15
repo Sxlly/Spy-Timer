@@ -241,12 +241,10 @@ async def SpyTimer(spyLocationPixel):
 
                 if spyStateOne == "dead" and spyStateTwo == "alive":
 
-                    pyautogui.press('o')
                     aliveNoise()
 
                 elif spyStateOne == "alive" and spyStateTwo == "dead":
 
-                    pyautogui.press('p')
                     deathNoise()
                 
                 else:
