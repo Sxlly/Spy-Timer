@@ -1,5 +1,4 @@
 from PIL import ImageGrab, ImageTk, Image
-import pyautogui
 import asyncio
 import tkinter
 from tkinter import messagebox
