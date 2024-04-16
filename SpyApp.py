@@ -314,7 +314,6 @@ def countup_method(command):
     if command == 'init':
 
         start_btn.configure(text='Stop', command=lambda: countup_method('stop'))
-        counter()
 
     elif command == 'start':
         start_btn.configure(text='Stop', fg_color="red", command=lambda: countup_method('stop'))
@@ -329,6 +328,7 @@ def countup_method(command):
     elif command == 'run':
 
         initTimer_btn.configure(text='Initialise', command=lambda: asyncio.run(initialise_Timer()))
+        counter()
 
 #////////////////////
 #main function ---> run function
