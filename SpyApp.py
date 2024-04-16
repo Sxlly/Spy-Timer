@@ -365,6 +365,10 @@ async def main():
 
     return
 
+#////////////////////////////////
+##second thread for live GUI updating 
+
+
 
 
 
