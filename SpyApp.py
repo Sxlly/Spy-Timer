@@ -16,6 +16,7 @@ SpyApp = customtkinter.CTk()
 SpyApp.geometry("600x440")
 SpyApp.title("Spy Timer")
 SpyApp.iconbitmap("spyIcon.ico")
+spyImage = ImageTk.PhotoImage(file="spyIcon.ico")
 
 
 counting = [0,0]
@@ -419,6 +420,12 @@ bgLayout.pack()
 #timerUIFrame => everything inside this frame***
 frame = customtkinter.CTkFrame(master=bgLayout, width=320, height=360, corner_radius=15)
 frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+
+
+
+titleImage = customtkinter.CTkLabel(master=frame, image=spyImage)
+titleImage.place(x=65, y=10)
 
 frameTitle = customtkinter.CTkLabel(master=frame, text="SpyTimer", font=('Century Gothic', 30, 'bold'))
 frameTitle.place(x=97.5, y=45)
