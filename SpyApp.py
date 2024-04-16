@@ -380,10 +380,10 @@ async def main_runner():
 ##asyncio between callback buffer method --> RUNS in between thread call and asynchronous method
 def between_thread():
 
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
+    loop = asyncio.new_event_loop() # <--- create new asynchronous loop
+    asyncio.set_event_loop(loop) # <--- set new event loop to current event loop
 
-    loop.run_until_complete(main_runner())
+    loop.run_until_complete(main_runner()) #<--- 
     loop.close()
 
 
