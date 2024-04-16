@@ -218,12 +218,12 @@ async def SpyTimer(spyLocationPixel):
                 print("state two" + spyStateTwo)
 
                 if spyStateOne == "alive":
-
+                    
                     interation_counter += 1
                     aliveNoise()
                 
                 elif spyStateOne == "dead":
-
+                    
                     interation_counter += 1
                     deathNoise()
                 
@@ -298,12 +298,13 @@ def counter():
         else:
             counting_label.configure(text= f'{datetime.timedelta(seconds=counting[1])}: {counting[0]}')
     
+    
     elif reset:
         reset = False
         counting = [0, 0]
         counting_label.configure(text="0:00:00:00")
     
-    SpyApp.after(10, counter)
+    SpyApp.after(5, counter)
 
 #///////////////////////////////
 #method to change timer status determined on user interaction {input} ==> button pressed changes timer status ==> displayed via text on app face
@@ -373,7 +374,7 @@ async def main():
 #main run method wrapper method
 async def main_runner():
 
-    await main()
+    await main() #<--- RUN main function for spyScript
 
 
 #////////////////////////////////
@@ -395,6 +396,14 @@ def initialise_Timer():
     continous_timer_thread.start()
 
     return
+
+
+
+
+
+
+
+
 
 
 #Styling GUI SECTION***
