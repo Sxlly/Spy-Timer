@@ -366,7 +366,10 @@ async def main():
     return
 
 #////////////////////////////////
-##second thread for live GUI updating 
+##initialise program method --> RUNS when init button is pressed which RUNS --> second thread for live GUI updating
+async def initialise_Timer():
+
+    return
 
 
 
