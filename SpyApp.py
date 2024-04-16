@@ -373,7 +373,8 @@ async def main():
 ##initialise program method --> RUNS when init button is pressed which RUNS --> second thread for live GUI updating
 async def initialise_Timer():
 
-    await main()
+    continous_timer_thread = threading.Thread(target= await main, args=())
+    continous_timer_thread.start()
 
     return
 
