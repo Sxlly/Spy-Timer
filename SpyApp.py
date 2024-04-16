@@ -369,6 +369,10 @@ async def main():
 
     return
 
+
+#////////////////////////////////
+##asyncio between callback buffer method --> RUNS in between thread call and asynchronous method
+
 #////////////////////////////////
 ##initialise program method --> RUNS when init button is pressed which RUNS --> second thread for live GUI updating
 def initialise_Timer():
