@@ -328,7 +328,7 @@ def countup_method(command):
     
     elif command == 'run':
 
-        initTimer_btn.configure(text='Initialise', command=lambda: initialise_Timer())
+        initTimer_btn.configure(text='Initialise', command=lambda: asyncio.run(initialise_Timer()))
 
 #////////////////////
 #main function ---> run function
@@ -405,7 +405,7 @@ start_btn.place(x=50, y=195)
 reset_btn = customtkinter.CTkButton(master=frame, width=220, text="Reset", font=("Century Gothic", 15), corner_radius=6,  command=lambda: countup_method('reset'))
 reset_btn.place(x=50, y=225)
 
-initTimer_btn = customtkinter.CTkButton(master=frame, width=220, text="Initialise", font=("Century Gothic", 20), corner_radius=6)
+initTimer_btn = customtkinter.CTkButton(master=frame, width=220, text="Initialise", font=("Century Gothic", 20), corner_radius=6, command=lambda: countup_method('run'))
 initTimer_btn.place(x=50, y=275)
 
 #RUN APP --->>>
