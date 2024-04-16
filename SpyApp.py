@@ -383,7 +383,7 @@ def between_thread():
     loop = asyncio.new_event_loop() # <--- create new asynchronous loop
     asyncio.set_event_loop(loop) # <--- set new event loop to current event loop
 
-    loop.run_until_complete(main_runner()) #<--- 
+    loop.run_until_complete(main_runner()) #<--- run the event loop until complete (nevers completes as has an infinite loop inside main())
     loop.close()
 
 
