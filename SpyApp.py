@@ -16,7 +16,15 @@ SpyApp = customtkinter.CTk()
 SpyApp.geometry("600x440")
 SpyApp.title("Spy Timer")
 SpyApp.iconbitmap("spyIcon.ico")
-spyImage = ImageTk.PhotoImage(file="spyIcon.ico")
+
+
+initSpyImage = (Image.open("spyIcon.ico"))
+resizedSpyImage = initSpyImage.resize((30,30))
+finalSpyImage = ImageTk.PhotoImage(resizedSpyImage)
+
+initImage = (Image.open("initIcon.ico"))
+resizedInitImage = initImage.resize((20,20))
+finalInitImage = ImageTk.PhotoImage(resizedInitImage)
 
 
 counting = [0,0]
@@ -442,7 +450,7 @@ start_btn.place(x=50, y=195)
 reset_btn = customtkinter.CTkButton(master=frame, width=220, text="Reset", font=("Century Gothic", 15), corner_radius=6,  command=lambda: countup_method('reset'))
 reset_btn.place(x=50, y=225)
 
-initTimer_btn = customtkinter.CTkButton(master=frame, width=220, text="Initialise", font=("Century Gothic", 20), corner_radius=6, command=lambda: countup_method('run'))
+initTimer_btn = customtkinter.CTkButton(master=frame, width=220, text="Initialise", image=finalInitImage, font=("Century Gothic", 20), corner_radius=6, fg_color="#8f8e8b", command=lambda: countup_method('run'))
 initTimer_btn.place(x=50, y=275)
 
 #RUN APP --->>>
