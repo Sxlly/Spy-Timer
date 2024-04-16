@@ -19,7 +19,7 @@ SpyApp.iconbitmap("spyIcon.ico")
 
 
 initSpyImage = (Image.open("spyIcon.ico"))
-resizedSpyImage = initSpyImage.resize((30,30))
+resizedSpyImage = initSpyImage.resize((80,80))
 finalSpyImage = ImageTk.PhotoImage(resizedSpyImage)
 
 initImage = (Image.open("initIcon.ico"))
@@ -432,11 +432,8 @@ frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
 
 
-titleImage = customtkinter.CTkLabel(master=frame, image=spyImage)
-titleImage.place(x=65, y=10)
-
-frameTitle = customtkinter.CTkLabel(master=frame, text="SpyTimer", font=('Century Gothic', 30, 'bold'))
-frameTitle.place(x=97.5, y=45)
+titleImage = customtkinter.CTkLabel(master=frame, text="", image=finalSpyImage)
+titleImage.place(x=120, y=25)
 
 counting_label = customtkinter.CTkLabel(master=frame, width=220, text="0:00:00:00", font=("Century Gothic", 25))
 counting_label.place(x=50, y=110)
