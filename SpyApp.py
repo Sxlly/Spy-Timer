@@ -403,11 +403,12 @@ start_btn.place(x=50, y=195)
 reset_btn = customtkinter.CTkButton(master=frame, width=220, text="Reset", font=("Century Gothic", 15), corner_radius=6,  command=lambda: countup_method('reset'))
 reset_btn.place(x=50, y=225)
 
+initTimer_btn = customtkinter.CTkButton(master=frame, width=220, text="Initialise", font=("Century Gothic", 20), corner_radius=6)
+initTimer_btn.place(x=50, y=275)
 
 #RUN APP --->>>
 #/*************\
 
-SpyApp.after(100, asyncio.run(main()))
 SpyApp.mainloop()
 
 
