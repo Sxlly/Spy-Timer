@@ -325,6 +325,10 @@ def countup_method(command):
     elif command == 'reset':
         start_btn.configure(text='Start', command=lambda: countup_method('start'))
         reset = True
+    
+    elif command == 'run':
+
+        initTimer_btn.configure(text='Initialise', command=lambda: initialise_Timer())
 
 #////////////////////
 #main function ---> run function
