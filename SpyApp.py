@@ -15,9 +15,8 @@ customtkinter.set_default_color_theme("dark-blue")
 SpyApp = customtkinter.CTk()
 SpyApp.geometry("600x440")
 SpyApp.title("Spy Timer")
-loadAppIcon = Image.open("spyIcon.png")
-renderAppIcon = ImageTk.PhotoImage(loadAppIcon)
-SpyApp.iconphoto(False, renderAppIcon)
+SpyApp.iconbitmap("spyIcon.ico")
+
 
 counting = [0,0]
 reset = False
