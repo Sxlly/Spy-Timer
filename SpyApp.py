@@ -327,7 +327,7 @@ def countup_method(command):
     
     elif command == 'run':
 
-        initTimer_btn.configure(text='Initialise', command=lambda: asyncio.run(initialise_Timer()))
+        initTimer_btn.configure(text='Initialise', command=lambda: initialise_Timer())
         counter()
 
 #////////////////////
@@ -371,7 +371,7 @@ async def main():
 
 #////////////////////////////////
 ##initialise program method --> RUNS when init button is pressed which RUNS --> second thread for live GUI updating
-async def initialise_Timer():
+def initialise_Timer():
 
     continous_timer_thread = threading.Thread(target= main, args=()) # <--- thread creation
     continous_timer_thread.start()
