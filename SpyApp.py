@@ -369,15 +369,29 @@ async def main():
 
     return
 
+#///////////////////////////////
+#main run method wrapper method
+async def main_runner():
+
+    await main()
+
 
 #////////////////////////////////
 ##asyncio between callback buffer method --> RUNS in between thread call and asynchronous method
+def between_thread():
+
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
+    loop.run_until_complete(main_runner())
+    loop.close()
+
 
 #////////////////////////////////
 ##initialise program method --> RUNS when init button is pressed which RUNS --> second thread for live GUI updating
 def initialise_Timer():
 
-    continous_timer_thread = threading.Thread(target= main, args=()) # <--- thread creation
+    continous_timer_thread = threading.Thread(target= between_thread, args=()) # <--- thread creation
     continous_timer_thread.start()
 
     return
