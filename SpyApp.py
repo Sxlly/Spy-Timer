@@ -231,6 +231,7 @@ async def SpyTimer(spyLocationPixel):
                 if spyStateOne == "alive":
                     
                     interation_counter += 1
+                    counter()
                     aliveNoise()
                 
                 elif spyStateOne == "dead":
@@ -294,11 +295,11 @@ async def deathNoise():
 
 #///////////////////////////////
 #method to count upwards on timer, displayed via text on app face
-def counter():
+def counter(timerCommand):
 
     global counting, reset
 
-    if start_btn._text != 'Start':
+    if timerCommand == 'Start':
         counting[0] += 1
 
         if counting[0] == 100:
@@ -329,7 +330,7 @@ def countup_method(command):
     elif command == 'run':
 
         initTimer_btn.configure(text='Initialise', command=lambda: initialise_Timer())
-        counter()
+        counter("Init")
 
 #////////////////////
 #main function ---> run function
