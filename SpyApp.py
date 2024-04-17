@@ -323,18 +323,7 @@ def countup_method(command):
 
     global reset
 
-    if command == 'init':
-
-        start_btn.configure(text='Stop', command=lambda: countup_method('stop'))
-
-    elif command == 'start':
-        start_btn.configure(text='Stop', fg_color="red", command=lambda: countup_method('stop'))
-
-    elif command == 'stop':
-        start_btn.configure(text='Start', fg_color="green", command=lambda: countup_method('start'))
-
-    elif command == 'reset':
-        start_btn.configure(text='Start', command=lambda: countup_method('start'))
+    if command == 'reset':
         reset = True
     
     elif command == 'run':
