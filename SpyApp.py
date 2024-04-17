@@ -318,6 +318,12 @@ def counter():
 
         else:
             counting_label.configure(text= f'{datetime.timedelta(seconds=counting[1])}: {counting[0]}')
+
+    if timerCommand == 'Stop':
+
+        reset = False
+        counting = [0,0]
+        counting_label.configure(text="0:00:00:00")
     
     
     elif reset:
@@ -334,6 +340,8 @@ def countup_method(command):
     global reset
 
     if command == 'reset':
+
+        reset_btn.configure(text="Reset")
         reset = True
     
     elif command == 'run':
