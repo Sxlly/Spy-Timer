@@ -35,6 +35,7 @@ finalResetImage = ImageTk.PhotoImage(resizedResetImage)
 
 counting = [0,0]
 reset = False
+timerCommand = "Stop"
 
 #///////////////////////
 #is Host player on Blu team detection
@@ -301,9 +302,9 @@ async def deathNoise():
 
 #///////////////////////////////
 #method to count upwards on timer, displayed via text on app face
-def counter(timerCommand):
+def counter():
 
-    global counting, reset
+    global counting, reset, timerCommand
 
     if timerCommand == 'Start':
         counting[0] += 1
