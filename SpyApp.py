@@ -27,6 +27,8 @@ resizedInitImage = initImage.resize((20,20))
 finalInitImage = ImageTk.PhotoImage(resizedInitImage)
 
 
+
+
 counting = [0,0]
 reset = False
 
