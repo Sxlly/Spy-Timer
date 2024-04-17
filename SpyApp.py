@@ -221,6 +221,7 @@ async def SpyState(spyLocationPixel):
 async def SpyTimer(spyLocationPixel):
 
     interation_counter = 0
+    global timerCommand
 
     try:
 
@@ -248,6 +249,7 @@ async def SpyTimer(spyLocationPixel):
                 
                 else:
                     print("There is no Spy in Play currently\n")
+                    timerCommand = "Start"
                     continue
             else:
 
@@ -337,7 +339,7 @@ def countup_method(command):
     elif command == 'run':
 
         initTimer_btn.configure(text='Initialise', command=lambda: initialise_Timer())
-        counter("Init")
+        counter()
 
 #////////////////////
 #main function ---> run function
