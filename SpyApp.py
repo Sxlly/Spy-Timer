@@ -35,7 +35,7 @@ finalResetImage = ImageTk.PhotoImage(resizedResetImage)
 
 counting = [0,0]
 reset = False
-timerCommand = "Stop"
+timerCommand = "None"
 
 #///////////////////////
 #is Host player on Blu team detection
@@ -239,12 +239,13 @@ async def SpyTimer(spyLocationPixel):
                 if spyStateOne == "alive":
                     
                     interation_counter += 1
-                    counter()
+                    timerCommand = "Start"
                     aliveNoise()
                 
                 elif spyStateOne == "dead":
                     
                     interation_counter += 1
+                    timerCommand = "Stop"
                     deathNoise()
                 
                 else:
@@ -262,7 +263,7 @@ async def SpyTimer(spyLocationPixel):
 
                 if spyStateOne == "dead" and spyStateTwo == "alive":
 
-
+                    timerCommand = "Start"
                     aliveNoise()
 
                 elif spyStateOne == "alive" and spyStateTwo == "dead":
