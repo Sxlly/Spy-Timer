@@ -26,6 +26,10 @@ initImage = (Image.open("initIcon.ico"))
 resizedInitImage = initImage.resize((20,20))
 finalInitImage = ImageTk.PhotoImage(resizedInitImage)
 
+initResetImage = (Image.open("resetIcon.ico"))
+resizedResetImage = initResetImage.resize((20,20))
+finalResetImage = ImageTk.PhotoImage(resizedResetImage)
+
 
 
 
