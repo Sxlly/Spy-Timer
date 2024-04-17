@@ -434,8 +434,8 @@ titleImage.place(x=120, y=25)
 counting_label = customtkinter.CTkLabel(master=frame, width=220, text="0:00:00:00", font=("Century Gothic", 25))
 counting_label.place(x=50, y=110)
 
-reset_btn = customtkinter.CTkButton(master=frame, width=220, text="Reset", font=("Century Gothic", 20), corner_radius=6, fg_color="#8f8e8b", command=lambda: countup_method('reset'))
-reset_btn.place(x=50, y=150)
+reset_btn = customtkinter.CTkButton(master=frame, width=220, text="Reset", image=finalResetImage, font=("Century Gothic", 20), corner_radius=6, fg_color="#8f8e8b", command=lambda: countup_method('reset'))
+reset_btn.place(x=50, y=160)
 
 initTimer_btn = customtkinter.CTkButton(master=frame, width=220, text="Initialise", image=finalInitImage, font=("Century Gothic", 20), corner_radius=6, fg_color="#8f8e8b", command=lambda: countup_method('run'))
 initTimer_btn.place(x=50, y=200)
