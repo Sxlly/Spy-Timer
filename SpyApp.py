@@ -32,7 +32,7 @@ finalResetImage = ImageTk.PhotoImage(resizedResetImage)
 
 
 
-
+#global vars 
 counting = [0,0]
 reset = False
 timerCommand = "None"
