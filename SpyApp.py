@@ -267,7 +267,8 @@ async def SpyTimer(spyLocationPixel):
                     aliveNoise()
 
                 elif spyStateOne == "alive" and spyStateTwo == "dead":
-
+                    
+                    timerCommand = "Stop"
                     deathNoise()
                 
                 else:
