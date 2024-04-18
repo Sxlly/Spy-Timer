@@ -51,10 +51,11 @@ async def bluTeamDetector():
         for index in range(395):
 
             currentPixelColor = image.getpixel((widthStaticDimensionStart + index, heightStaticDimensionStart))
-            engyHelmetColor = (255,217,98)
+            engyHelmetColorAlive = (255,217,98)
+            engyHelmetColorDead = (255,205,91)
 
 
-            if currentPixelColor == engyHelmetColor:
+            if currentPixelColor == engyHelmetColorAlive or currentPixelColor == engyHelmetColorDead:
 
                 print("Blu team")
                 print("engineer at: " + "W:" + str(widthStaticDimensionStart + index) + " H:" + str(heightStaticDimensionStart))
