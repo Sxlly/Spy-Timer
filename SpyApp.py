@@ -83,9 +83,10 @@ async def redTeamDetector():
         for index in range(395):
 
             currentPixelColor = image.getpixel((widthStaticDimensionStart + index, heightStaticDimensionStart))
-            engyHelmetColor = (255,205,91)
+            engyHelmetColorAlive = (255,205,91)
+            engyHelmetColorDead = (255,217,98)
 
-            if currentPixelColor == engyHelmetColor:
+            if currentPixelColor == engyHelmetColorAlive or currentPixelColor == engyHelmetColorDead:
 
                 print("Red Team")
                 print("engineer at: " + "W:" + str(widthStaticDimensionStart + index) + " H:" + str(heightStaticDimensionStart))
