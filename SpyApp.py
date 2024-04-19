@@ -37,6 +37,7 @@ finalResetImage = ImageTk.PhotoImage(resizedResetImage)
 
 #///////////////////////////////////////
 #pretty errors configuration
+#tkinter messagebox ERROR will be favoured over console errors 
 pretty_errors.configure(
     separator_character='*',
     filename_display=pretty_errors.FILENAME_FULL,
@@ -470,7 +471,6 @@ initTimer_btn.place(x=50, y=200)
 
 #RUN APP --->>>
 #/*************\
-
 if __name__ == "__main__":
     SpyApp.mainloop()
 
