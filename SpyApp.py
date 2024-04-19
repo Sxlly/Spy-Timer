@@ -14,7 +14,7 @@ import pretty_errors
 customtkinter.set_appearance_mode("Light")
 customtkinter.set_default_color_theme("dark-blue")
 
-
+#Declaring App --> Title & Icon {AppBar}
 SpyApp = customtkinter.CTk()
 SpyApp.geometry("600x440")
 SpyApp.title("Spy Timer")
