@@ -38,7 +38,9 @@ finalResetImage = ImageTk.PhotoImage(resizedResetImage)
 #///////////////////////////////////////
 #pretty errors configuration
 pretty_errors.configure(
-    separator_character='*'
+    separator_character='*',
+    filename_display=pretty_errors.FILENAME_FULL,
+    
 )
 
 
