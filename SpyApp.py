@@ -440,14 +440,6 @@ def initialise_Timer():
     return
 
 
-
-
-
-
-
-
-
-
 #Styling GUI SECTION***
 # interface layout and packing (pushing to app) =>>>
 
@@ -459,9 +451,6 @@ bgLayout.pack()
 #timerUIFrame => everything inside this frame***
 frame = customtkinter.CTkFrame(master=bgLayout, width=320, height=360, corner_radius=15)
 frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
-
-
-
 
 titleImage = customtkinter.CTkLabel(master=frame, text="", image=finalSpyImage)
 titleImage.place(x=120, y=25)
