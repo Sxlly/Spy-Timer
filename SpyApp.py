@@ -20,7 +20,8 @@ SpyApp.geometry("600x440")
 SpyApp.title("Spy Timer")
 SpyApp.iconbitmap("spyIcon.ico")
 
-
+#/////////////////////////////////////////
+#image importing and resizing 
 initSpyImage = (Image.open("spyIcon.ico"))
 resizedSpyImage = initSpyImage.resize((80,80))
 finalSpyImage = ImageTk.PhotoImage(resizedSpyImage)
@@ -32,6 +33,10 @@ finalInitImage = ImageTk.PhotoImage(resizedInitImage)
 initResetImage = (Image.open("resetIcon.ico"))
 resizedResetImage = initResetImage.resize((20,20))
 finalResetImage = ImageTk.PhotoImage(resizedResetImage)
+
+
+#///////////////////////////////////////
+#pretty errors configuration 
 
 
 
