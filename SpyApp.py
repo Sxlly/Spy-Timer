@@ -45,8 +45,6 @@ pretty_errors.configure(
     lines_after=5
 )
 
-
-
 #global vars 
 counting = [0,0]
 reset = False
