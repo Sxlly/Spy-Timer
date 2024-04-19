@@ -9,6 +9,8 @@ import datetime
 import threading
 import pretty_errors
 
+#*******************************
+#setting default themes and apperances for customer tkinter GUI
 customtkinter.set_appearance_mode("Light")
 customtkinter.set_default_color_theme("dark-blue")
 
