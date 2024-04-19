@@ -471,7 +471,8 @@ initTimer_btn.place(x=50, y=200)
 #RUN APP --->>>
 #/*************\
 
-SpyApp.mainloop()
+if __name__ == "__main__":
+    SpyApp.mainloop()
 
 
 
