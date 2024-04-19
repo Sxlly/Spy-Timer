@@ -402,7 +402,9 @@ async def main():
         
     except:
         print("AN ERROR OCCURED")
+        flagError()
         time.sleep(5)
+
 
     return
 
@@ -410,7 +412,7 @@ async def main():
 #///////////////////////////////
 #show ERRORMESSAGE method ---> Custom Tkinter GUI
 def flagError():
-    messagebox.showerror(title="Error", message="Spy Timer has accounted the following error: #***add error details***")
+    messagebox.showerror(title="Error", message="Spy Timer has accounted the following error: ")
 
 #///////////////////////////////
 #main run method wrapper method
