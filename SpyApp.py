@@ -406,6 +406,12 @@ async def main():
 
     return
 
+
+#///////////////////////////////
+#show ERRORMESSAGE method ---> Custom Tkinter GUI
+def flagError():
+    messagebox.showerror()
+
 #///////////////////////////////
 #main run method wrapper method
 async def main_runner():
