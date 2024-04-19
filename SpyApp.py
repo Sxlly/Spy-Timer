@@ -7,6 +7,7 @@ import time
 import customtkinter
 import datetime
 import threading
+import pretty_errors
 
 customtkinter.set_appearance_mode("Light")
 customtkinter.set_default_color_theme("dark-blue")
