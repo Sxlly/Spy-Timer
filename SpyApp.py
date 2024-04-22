@@ -423,7 +423,11 @@ def flagError(errorDesc):
 #main run method wrapper method
 async def main_runner():
 
-    await main() #<--- RUN main function for spyScript
+    try:
+        await main() #<--- RUN main function for spyScript
+    except Exception as errorDesc:
+        flagError(errorDesc)
+    return
 
 
 #////////////////////////////////
