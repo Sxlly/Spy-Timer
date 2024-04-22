@@ -400,9 +400,9 @@ async def main():
             await SpyTimer(spyPixel)
             return
         
-    except:
+    except Exception as errorDesc:
         print("AN ERROR OCCURED")
-        flagError()
+        flagError(errorDesc)
         time.sleep(5)
 
 
@@ -412,7 +412,7 @@ async def main():
 #///////////////////////////////
 #show ERRORMESSAGE method ---> Custom Tkinter GUI
 def flagError(errorDesc):
-    messagebox.showerror(title="Error", message="Spy Timer has accounted the following error: ")
+    messagebox.showerror(title="Error", message="Spy Timer has accounted the following error: " + str(errorDesc))
 
 #///////////////////////////////
 #main run method wrapper method
