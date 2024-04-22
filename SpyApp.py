@@ -153,7 +153,8 @@ async def spyLocaterRed():
 
         return spyPixelLocation
      
-    except:
+    except Exception as errorDesc:
+        flagError(errorDesc)
         print("AN ERROR OCCURED")
         print("most likely error: SCREEN RESOLUTION SMALLER THAN CURRENT INDEX")
         time.sleep(5)
@@ -293,7 +294,8 @@ async def SpyTimer(spyLocationPixel):
                 
                 else:
                     continue
-    except:
+    except Exception as errorDesc:
+        flagError(errorDesc)
         print("AN ERROR OCCURED")
         time.sleep(5)
 
@@ -408,7 +410,6 @@ async def main():
         print("AN ERROR OCCURED")
         flagError(errorDesc)
         time.sleep(5)
-
 
     return
 
