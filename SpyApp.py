@@ -417,8 +417,9 @@ async def main():
 #///////////////////////////////
 #show ERRORMESSAGE method ---> Custom Tkinter GUI
 def flagError(errorDesc):
-    messagebox.showerror(title="Error", message="Spy Timer has accounted the following error: " + str(errorDesc))
+        messagebox.showerror(title="Error", message="Spy Timer has accounted the following error: " + str(errorDesc)) #<--- if this crashes runtime process --> pretty errors to terminal
 
+        
 #///////////////////////////////
 #main run method wrapper method
 async def main_runner():
