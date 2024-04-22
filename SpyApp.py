@@ -78,7 +78,8 @@ async def bluTeamDetector():
                 
         return isOnBlu
                  
-    except:
+    except Exception as errorDesc:
+        flagError(errorDesc)
         print("AN ERROR OCCURED")   
         time.sleep(5)
         return isOnBlu
@@ -109,7 +110,8 @@ async def redTeamDetector():
 
         return isOnRed
 
-    except:
+    except Exception as errorDesc:
+        flagError(errorDesc)
         print("AN ERROR OCCURED")
         time.sleep(5)
         return isOnRed
@@ -228,7 +230,8 @@ async def SpyState(spyLocationPixel):
                 spyStatus = "dead"
                 return spyStatus
     
-    except:
+    except Exception as errorDesc:
+        flagError(errorDesc)
         print("AN ERROR OCCURED")
         print("most likely error: Pixel does not exist")
         time.sleep(5)
